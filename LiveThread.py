@@ -3,7 +3,7 @@ import time
 import traceback
  
 """CONFIGURATION DATA"""
-BOT_DESCRIPTION = "HomeworkHelp Helper"
+BOT_DESCRIPTION = "LiveThread Helper"
 VERSION = '0.1.0'
 USER_AGENT = "{} v{}, to help remove all live discussion posts.".format(BOT_DESCRIPTION, VERSION)
 WAIT = 60
@@ -15,7 +15,7 @@ reddit = praw.Reddit(client_id="",
  
 def main_runtime():
    
-    for submission in reddit.subreddit('HomeworkHelp').new(limit=100):
+    for submission in reddit.subreddit('SubredditName').new(limit=100):
    
         submission_type = submission.discussion_type
         if submission.saved:
